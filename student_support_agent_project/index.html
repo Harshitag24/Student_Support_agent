@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b63ce">
+  <title>Student Support Agent — Student Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="cloud-logo" aria-label="Student Hub SH logo">
+          <svg viewBox="0 0 64 48" role="img" aria-hidden="true">
+            <path d="M18 39C8 39 4 32 6 24c2-7 8-11 15-10C25 3 36 1 44 7c5 3 7 8 7 13 7 0 11 4 11 10 0 6-5 9-12 9H18Z" fill="currentColor"/>
+            <text x="32" y="31" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">SH</text>
+          </svg>
+        </div>
+        <div><strong>Student Hub</strong><span>Student Support Agent</span></div>
+      </div>
+
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" type="button" id="navChat"><span class="nav-icon">◉</span> Chat assistant <span class="nav-dot"></span></button>
+      <div class="side-label section-label">QUICK SUPPORT</div>
+      <button class="nav-item quick-nav" data-prompt="Help me make a study timetable for this week"><span class="nav-icon">▦</span> Study planner</button>
+      <button class="nav-item quick-nav" data-prompt="How should I start my assignment?"><span class="nav-icon">▤</span> Assignment guide</button>
+      <button class="nav-item quick-nav" data-prompt="Help me prepare for my viva"><span class="nav-icon">◇</span> Viva preparation</button>
+      <button class="nav-item quick-nav" data-prompt="Give me beginner DSA practice advice"><span class="nav-icon">⌘</span> Coding support</button>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon">✦</div>
+          <strong>Here to help you learn</strong>
+          <p>Get structured ideas for studying, projects, exams, and coding practice.</p>
+        </div>
+        <div class="developer"><div class="dev-avatar">HG</div><div><strong>Harshita Gautam</strong><span>Student Developer</span></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb"><span>Student Hub</span><span class="crumb-slash">/</span><strong>Chat assistant</strong></div>
+        <div class="top-actions"><span class="secure-tag"><span class="tiny-green"></span> Demo environment</span><button class="clear-btn" id="clearChat" type="button">↻ <span>Clear chat</span></button></div>
+      </header>
+
+      <section class="welcome-strip">
+        <div>
+          <div class="eyebrow"><span class="sparkle">✦</span> YOUR ACADEMIC COMPANION</div>
+          <h1>Student Support Agent</h1>
+          <p>One place to organise your learning, work through questions, and keep moving forward.</p>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-cloud"><span>SH</span><i>✦</i></div>
+          <div class="art-star star-one">✦</div><div class="art-star star-two">✧</div>
+        </div>
+      </section>
+
+      <section class="chat-card" aria-label="Student Support conversation">
+        <div class="chat-header">
+          <div class="bot-avatar"><span>✦</span><i></i></div>
+          <div class="chat-title"><strong>Student Support</strong><span>Academic guidance assistant</span></div>
+          <div class="online-pill"><span></span> Online</div>
+        </div>
+        <div class="conversation" id="messages" aria-live="polite" aria-label="Chat messages">
+          <div class="date-divider"><span></span><small>START A CONVERSATION</small><span></span></div>
+          <div class="message-row bot-row">
+            <div class="message-avatar">✦</div>
+            <div class="message-content"><div class="sender">Student Support <span>• just now</span></div><div class="bubble">Hi Harshita! 👋 Welcome to Student Hub.
+
+I can help you plan study sessions, organise assignments, prepare for exams and viva, or practise programming concepts.
+
+What would you like to work on today?</div></div>
+          </div>
+        </div>
+        <div class="suggestion-area">
+          <div class="suggestion-heading"><span>✧</span> Try asking</div>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Make me a realistic study timetable"> <span>▦</span> Make a study timetable</button>
+            <button class="suggestion" data-prompt="Give me a checklist for my college assignment"> <span>☑</span> Assignment checklist</button>
+            <button class="suggestion" data-prompt="How can I prepare for an exam in two days?"> <span>◷</span> Exam revision plan</button>
+            <button class="suggestion" data-prompt="Explain how to start learning Java and DSA"> <span>⌘</span> Java & DSA guidance</button>
+          </div>
+        </div>
+        <form class="composer" id="chatForm">
+          <label class="sr-only" for="question">Type your question</label>
+          <div class="input-wrap"><span class="input-spark">✧</span><input id="question" type="text" placeholder="Ask about studying, assignments, coding..." autocomplete="off" maxlength="800"><span class="input-hint">Enter ↵</span></div>
+          <button class="send-btn" id="sendButton" type="submit"><span>Send</span><b>➤</b></button>
+        </form>
+        <div class="composer-foot"><span>Student Hub can make mistakes. Verify important academic details with your instructor.</span><span>Built for learning <b>♡</b></span></div>
+      </section>
+      <footer class="page-footer"><span>© 2026 Student Support Agent</span><span>Designed and developed by <strong>Harshita Gautam</strong></span><span class="footer-tech">HTML · CSS · JavaScript</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
